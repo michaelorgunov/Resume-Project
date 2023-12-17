@@ -228,14 +228,16 @@
   <script>
     document.getElementById('exportButton').addEventListener('click', function() {
       const element = document.getElementById('pdfContent');
-
+  
       html2pdf(element, {
-        // margin: [Vertical, Horizontal]
         margin: [0, 0],
-        filename: 'exported_content.pdf',
-        html2canvas: { scale: 5 }, // Set the scale for better quality
+        filename: 'resume.pdf',
+        html2canvas: { scale: 5, useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).save();
+      }).then(pdf => {
+        // Save the PDF after generation
+        pdf.save();
+      });
     });
   </script>
 </body>
