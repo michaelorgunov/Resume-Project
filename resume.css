@@ -42,8 +42,8 @@ body {
 }
 
 .imgLoc {
-    height: 0.6rem;
-    width: 0.6rem;
+    height: autom;
+    width: 0.8rem;
     margin-right: 5px;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .header {
-    width: 85%;
+    width: 90%;
     background: #324090;
     color: white;
     margin-top:10px;
@@ -87,4 +87,70 @@ body {
     color: black;
 }
 
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
 
+.subTitle {
+    color: #404040;
+}
+
+.date {
+    font-weight: bold;
+    color: gray;
+    font-size: .9em;
+}
+
+.corners {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentBody {
+    margin-top: 7px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1.01em;
+  }
+  
+  ul li {
+    padding-left: 25px;
+    list-style: none;
+    margin-bottom: 3px;
+    position: relative;
+  }
+  
+  ul li:before {
+    content: "\2022";
+    color: #d1d5db;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top:-8px;
+    font-size: 2em; 
+  }
+  
+  li {
+    padding-left: 30px;
+  }
+  
+  .first {
+    margin-top: 5px !important;
+  } 
+
+  .right-justify {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .first-none {
+    margin-top: 0px !important;
+  }
