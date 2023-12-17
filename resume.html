@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Export to PDF</title>
+  <link rel="stylesheet" type="text/css" href="resume.css">
+  <script type="text/javascript" src="resume.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+</head>
+<body>
+  <h1>Resume Maker</h1>
+  <button id="exportButton">Export as PDF</button>
+
+  <div id="pdfContent">
+    <div id="left">
+      <img src="profileMichael.jpg" alt="profile" class="photo">
+
+      <div class="info">
+        <h2 class="name">Michael Orgunov</h2>
+        <p class="infoItem"><img src="loc.svg" alt="location" class="imgLoc">Fort Worth, TX</p>
+        <p class="infoItem"><img src="email.png" alt="email" class="imgLoc">michaelorgunov@gmail.com</p>
+        <p class="infoItem"><img src="phone.svg" alt="phone" class="imgLoc">(817) 507-6380</p>
+        <p class="infoItem"><img src="linkedIn.svg" alt="linkedIn" class="imgLoc">michael-orgunov</p>
+
+
+      </div>
+
+      <div class="leftItem">
+        <div class="header">OBJECTIVE</div>
+        <p>
+          Aspiring software developer with experience with agile development, web apps, C++, Python, data analysis, and document control. Looking for a computer science-related position within the defense industry and seeking to develop new skills and contribute to developing secure and cutting-edge technologies.
+        </p>
+      </div>
+
+      <div class="leftItem">
+        <div class="header">PROGRAMMING LANGUAGES</div>
+        <div class="two-columns"> 
+          <p>C++</p> <p>Python</p>
+          <p>HTML/CSS</p> <p>JavaScript</p>
+          <p>Java</p> <p>SQL</p>
+          <p>Excel VBA</p> <p>Haskell</p>
+          <p>x-86-64 Assembly</p> <p></p>
+        </div>
+      </div>
+
+      <div class="leftItem">
+        <div class="header">SKILLS</div>
+        <div class="two-columns"> 
+          <p>Agile & Waterfall Development</p> <p>PostgreSQL</p>
+          <p>Git/GitHub</p> <p>Data Analysis/Entry</p>
+          <p>Digital Electronics Design</p> <p>Camera Operation</p>
+        </div>
+      </div>
+
+      <div class="leftItem">
+        <div class="header">RELATED COURSEWORK</div>
+          <div class="two-columns"> 
+            <p>Programming Studio</p> <p>Introduction to Computer Systems</p>
+            <p>Design & Analysis of Algorithms</p> <p>Data Structures & Algorithms</p>
+            <p>Linear Algebra</p> <p>Programming Languages</p>
+            <p>Discrete Structures for Computing</p> <p>Computer Organization</p>
+            <p>Principles of Statistics</p> <p>Introduction to Program Design</p>
+        </div>
+      </div>
+
+    </div>
+    <div id="content">
+      <div class="contentItem">
+        <div class="header">EDUCATION</div>
+          <div class="two-columns">
+            <p>Programming Studio</p> 
+            
+            <p>
+              <div class="title">Timber Creek High School</div>
+              <div class="subTitle"> </div>
+            </p>
+          </div>
+      </div>
+
+      <div class="contentItem">
+        <div class="header">WORK EXPERIENCE</div>
+
+      </div>
+
+      <div class="contentItem">
+        <div class="header">PROJECTS</div>
+
+      </div>
+
+      <div class="contentItem">
+        <div class="header">VOLUNTEER EXPERIENCE</div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('exportButton').addEventListener('click', function() {
+      const element = document.getElementById('pdfContent');
+
+      html2pdf(element, {
+        // margin: [Vertical, Horizontal]
+        margin: [0, 0],
+        filename: 'exported_content.pdf',
+        html2canvas: { scale: 5 }, // Set the scale for better quality
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).save();
+    });
+  </script>
+</body>
+</html>

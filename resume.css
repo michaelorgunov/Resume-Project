@@ -1,0 +1,90 @@
+body {
+    background-color: beige;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight:500;
+    letter-spacing: 0.025em;
+}
+
+#pdfContent {
+    background: white;
+    overflow:hidden;
+    width: 795px; 
+    height: 1122px;
+    display: flex;
+}
+
+#pdfContent p {
+    margin-top:7px;
+    margin-bottom: 0;
+}
+
+#pdfContent h2 {
+    margin-top:0px;
+    margin-bottom: 10px;
+}
+
+#left {
+    background: #3f51b5;
+    height:100%;
+    width:30%;
+    padding-left: 15px;
+    padding-right:15px;
+    color: white;
+}
+
+.photo {
+    width:175px;
+    height:175px;
+    margin-left:15px;
+    margin-top:15px;
+    border-radius:10rem;
+}
+
+.imgLoc {
+    height: 0.6rem;
+    width: 0.6rem;
+    margin-right: 5px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    width: 85%;
+    background: #324090;
+    color: white;
+    margin-top:10px;
+    margin-bottom:8px;
+    margin-left: -15px;
+
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    letter-spacing: .07em;
+    font-weight: bold;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+
+}
+
+#content {
+    background: white;
+    height:100%;
+    width:70%;
+    padding-left: 15px;
+    padding-right:15px;
+    color: black;
+}
+
+
