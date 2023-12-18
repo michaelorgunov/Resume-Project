@@ -5,8 +5,9 @@
   <link rel="stylesheet" type="text/css" href="resume.css">
   <script type="text/javascript" src="resume.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></head>
 <body>
   <h1>Resume Maker</h1>
   <button id="exportButton">Export as PDF</button>
@@ -28,7 +29,7 @@
       <div class="leftItem">
         <div class="header">OBJECTIVE</div>
         <p>
-          Aspiring software developer with experience with agile development, web apps, C++, Python, data analysis, and document control. Looking for a computer science-related position within the defense industry and seeking to develop new skills and contribute to developing secure and cutting-edge technologies.
+          Aspiring software developer with experience in agile development, web apps, C++, Python, data analysis, and document control. Seeking a computer science-related position within the defense industry to further develop skills and contribute to the creation of secure, cutting-edge technologies.
         </p>
       </div>
 
@@ -46,8 +47,8 @@
       <div class="leftItem">
         <div class="header">SKILLS</div>
         <div class="two-columns"> 
-          <p>Agile & Waterfall Development</p> <p>PostgreSQL</p>
-          <p>Git/GitHub</p> <p>Data Analysis/Entry</p>
+          <p>Agile & Waterfall Development</p><p>Data Analysis/Entry</p>
+          <p>Git/GitHub</p>  <p>PostgreSQL</p>
           <p>Digital Electronics Design</p> <p>Camera Operation</p>
         </div>
       </div>
@@ -55,10 +56,10 @@
       <div class="leftItem">
         <div class="header">RELATED COURSEWORK</div>
           <div class="two-columns"> 
-            <p>Programming Studio</p> <p>Introduction to Computer Systems</p>
-            <p>Design & Analysis of Algorithms</p> <p>Data Structures & Algorithms</p>
+            <p>Programming Studio</p> <p>Design & Analysis of Algorithms</p>
+            <p>Computer Organization</p><p>Data Structures & Algorithms</p>
+            <p>Discrete Structures for Computing</p> <p>Introduction to Computer Systems</p>
             <p>Linear Algebra</p> <p>Programming Languages</p>
-            <p>Discrete Structures for Computing</p> <p>Computer Organization</p>
             <p>Principles of Statistics</p> <p>Introduction to Program Design</p>
         </div>
       </div>
@@ -72,7 +73,7 @@
               <div class="title">Texas A&M University</div>
               <div class="subTitle">Bachelor's Degree, Computer Science</div>
               <div class="date">(August 2021 - Present)</div>
-              <div class="contentBody">
+              <div class="contentBody normalFont">
                 Expected Graduation Date: May 2025
                 Minor: Neuroscience
                 GPA: 3.88/4.0
@@ -83,7 +84,7 @@
               <div class="title">Timber Creek High School</div>
               <div class="subTitle">High School Diploma</div>
               <div class="date">(August 2017 - May 2021)</div>
-              <div class="contentBody">
+              <div class="contentBody normalFont">
                 Rank: Salutatorian of over 800 students
                 GPA: 106.65/100
               </div>
@@ -214,7 +215,7 @@
               <ul>
                 <li>Operated a 4K broadcast camera and
                   3 PTZ cameras for the recording and
-                  live‑streaming of weekly church
+                  live‑streaming of church
                   services                  
                   </li>
               </ul>
@@ -233,7 +234,7 @@
         margin: [0, 0],
         filename: 'resume.pdf',
         html2canvas: { scale: 5, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
       }).then(pdf => {
         // Save the PDF after generation
         pdf.save();

@@ -1,48 +1,51 @@
 body {
     background-color: beige;
-    font-family: 'Open Sans';
-    font-size: 12px;
-    font-weight:500;
-    letter-spacing: 0.025em;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight:350;
+    letter-spacing: 0.0125em;
 }
 
 #pdfContent {
     background: white;
     overflow:hidden;
-    width: 795px; 
-    height: 1122px;
+    width: 816.2px; 
+    height: 1056px;
     display: flex;
 }
 
 #pdfContent p {
-    margin-top:7px;
+    margin-top: 5px;
     margin-bottom: 0;
 }
 
 #pdfContent h2 {
     margin-top:0px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #left {
-    background: #3f51b5;
+    /* background: #3f51b5; */
+    background: #05125a;
     height:100%;
     width:30%;
     padding-left: 15px;
     padding-right:15px;
     color: white;
+    font-weight: 500;
+    word-spacing: .035;
 }
 
 .photo {
-    width:175px;
-    height:175px;
-    margin-left:15px;
-    margin-top:15px;
-    border-radius:10rem;
+    width: 175px;
+    height: 175px;
+    margin-top: 8.5px;
+    left: calc(50% - 87.5px);
+    border-radius: 10rem;
 }
 
 .imgLoc {
-    height: autom;
+    height: auto;
     width: 0.8rem;
     margin-right: 5px;
 }
@@ -53,8 +56,9 @@ body {
 }
 
 .header {
-    width: 90%;
-    background: #324090;
+    width: 100%;
+    /* background: #324090; */
+    background-color: rgb(1, 0, 17);
     color: white;
     margin-top:10px;
     margin-bottom:8px;
@@ -74,8 +78,10 @@ body {
     display: grid;
     grid-template-columns: calc(50% - 5px) calc(50% - 5px);
     grid-column-gap: 10px;
-    grid-row-gap: 5px;
-
+    grid-row-gap: 3px;
+    li {
+        padding-right:0px;
+    }
 }
 
 #content {
@@ -94,6 +100,7 @@ body {
 
 .subTitle {
     color: #404040;
+    font-weight: 500;
 }
 
 .date {
@@ -108,27 +115,33 @@ body {
 }
 
 .contentBody {
-    margin-top: 7px;
+    margin-top: 6px;
     font-weight: 500;
     font-size: 1.1em;
+}
+
+.normalFont {
+    font-weight: 400;
+    font-size: .94em;
 }
 
 ul {
     margin: 0;
     padding: 0;
-    font-size: 1.01em;
+    font-size: .94em;
+    font-weight: 400;
   }
   
   ul li {
-    padding-left: 25px;
+    padding-left: 15px;
     list-style: none;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
     position: relative;
   }
   
   ul li:before {
     content: "\2022";
-    color: #d1d5db;
+    color: #5b5b5b;
     display: inline-block;
     position: absolute;
     left: 0;
