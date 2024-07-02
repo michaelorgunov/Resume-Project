@@ -51,6 +51,10 @@ body {
     margin-right: 5px;
 }
 
+.imLocLarger {
+    width: 1rem;
+}
+
 .infoItem {
     display: flex;
     align-items: center;
@@ -78,6 +82,16 @@ body {
 .two-columns {
     display: grid;
     grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    grid-column-gap: 10px;
+    grid-row-gap: 3px;
+    li {
+        padding-right:0px;
+    }
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: calc(33.33% - 5px) calc(33.33% - 5px) calc(33.33% - 5px);
     grid-column-gap: 10px;
     grid-row-gap: 3px;
     li {
